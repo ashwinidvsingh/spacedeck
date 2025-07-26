@@ -1,0 +1,16 @@
+.search-image{
+    width: 200px;
+    padding: 10px;
+}
+.download-link{
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #1e40af;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px
+}
+
+
+
