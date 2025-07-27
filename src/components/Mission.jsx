@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Card from './Card'
+
 function Mission({openModal}) {
     let [mission, setMission] = useState(null);
     useEffect(()=> {

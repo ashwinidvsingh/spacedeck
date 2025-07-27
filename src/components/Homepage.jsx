@@ -5,6 +5,7 @@ import Mission from './Mission'
 import Gallery from './Gallery'
 import Iss from './Iss'
 import Modal from './Modal'
+import Navbar from './Navbar'
 
 const Homepage = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,7 @@ const Homepage = () => {
 
   return (
     <>
+        <Navbar/>
         <h1>SpaceDeck</h1>        
         <div className="card-container">
             {/* {apodComponent} */}

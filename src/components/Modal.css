@@ -44,8 +44,8 @@
   }
 
   .modal-content {
-    background-color: #1e1e1e;
-    color: #fff;
+    background-color: #fff;
+    color: #1e1e1e;
     padding: 2rem;
     border-radius: 12px;
     max-width: 600px;

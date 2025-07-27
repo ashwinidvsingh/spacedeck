@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react'
 import { useLocation } from 'react-router-dom';
 import './GalleryPage.css';
+import Navbar from './Navbar'
+
 
 const SpaceGallery = () => {
   const location = useLocation();
@@ -40,6 +42,7 @@ const SpaceGallery = () => {
   
   return (
     <>
+      <Navbar/>
       <input type="text" name="search-image" placeholder="Enter keyword" id="search-image" ref={inputRef} className='search-image'/>
       <input type="button" value="Search" onClick={handleClick}/>
       {console.log("Helloo spaceGallery")}
