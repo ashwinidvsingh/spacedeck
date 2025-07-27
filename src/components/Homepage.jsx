@@ -6,6 +6,9 @@ import Gallery from './Gallery'
 import Iss from './Iss'
 import Modal from './Modal'
 import Navbar from './Navbar'
+import Footer from './Footer'
+import NewsSlider from './NewsSlider'
+
 
 const Homepage = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -35,11 +38,13 @@ const Homepage = () => {
             <Gallery/>
             {/* {missionComponent} */}
             {/* {galleryComponent} */}
+            <NewsSlider/>
             <Iss />
             <Modal isOpen = {isOpen} onClose= {closeModal}>
                 {modalContent}
             </Modal>
         </div>
+        <Footer/>
     </>
   )
 }

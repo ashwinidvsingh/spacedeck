@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Card from './Card'
+import { Card as MissionCard } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 function Mission({openModal}) {
     let [mission, setMission] = useState(null);
@@ -47,7 +50,7 @@ function Mission({openModal}) {
             <>
                 <h3>{mission?.name}</h3>
                 <p>Status: {mission.success ? "Successful" : "Failed"}</p>
-                <div className="crew-container">
+                {/* <div className="crew-container">
                     {crewDetails.map((crewData, index) => (
                         <div className="crew-member" key={index}>
                             <img src={crewData?.image} style={{ width: "100px", margin: "5px"}}/>
@@ -55,7 +58,22 @@ function Mission({openModal}) {
                             <span>(Role: {crewList?.[index]?.role})</span>
                         </div>
                     ))}
-                </div>
+                </div> */}
+                <Row xs={1} sm={2} className="g-4">
+                    {crewDetails.map((crewData, index) => (
+                        <Col key={index}>
+                        <MissionCard>
+                            <MissionCard.Img variant="top" src={crewData?.image}  style={{ height: "150px", objectFit: "cover" }} />
+                            <MissionCard.Body>
+                            <MissionCard.Title>{crewData?.name}</MissionCard.Title>
+                            <MissionCard.Text>
+                                (Role: {crewList?.[index]?.role})
+                            </MissionCard.Text>
+                            </MissionCard.Body>
+                        </MissionCard>
+                        </Col>
+                    ))}
+                </Row>
                 <p>Want to join the launch discussion?
                     <a rel="external" href={mission?.links?.reddit?.launch}>View Reddit thread</a>
                 </p>
