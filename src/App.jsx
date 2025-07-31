@@ -8,7 +8,8 @@ import Gallery from './components/Gallery'
 import Iss from './components/Iss'
 import Homepage from './components/Homepage'
 import Modal from './components/Modal'
-import { useNavigate, BrowserRouter, Routes, Route, replace } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import SpaceGallery from './components/SpaceGallery'
 function App() {
 
