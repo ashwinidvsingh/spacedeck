@@ -1,6 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import logo from '../assets/logo.png';
-import { useEffect, useState, useNavigate } from 'react';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function NewsSlider() {
     const [newsData, setNewsData] = useState([]);
@@ -30,7 +31,7 @@ function NewsSlider() {
   return (
     <Carousel>
         {newsData && newsData.map((news, index)=>(
-            <Carousel.Item key={index} interval={1000} onClick={handleClick()}>
+            <Carousel.Item key={index} interval={1000}>
                 <div className="d-flex justify-content-center align-items-center bg-light" style={{ height: '500px' }}>
                 <div style={{ width: '800px', position: 'relative' }}>
 
