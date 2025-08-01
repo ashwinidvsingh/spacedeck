@@ -58,7 +58,7 @@ const SpaceGallery = () => {
     <>
       <Navbar/>
       <div className='my-5 d-flex gap-3 justify-content-center'>
-        <input type="text" name="search-image" placeholder="Enter keyword" id="search-image" ref={inputRef} value={searchterm} className='search-image'/>
+        <input type="text" name="search-image" placeholder="Enter keyword" id="search-image" ref={inputRef} className='search-image'/>
         <input type="button" value="Search" onClick={()=>handleClick()}/>
       </div>
       {console.log("Helloo spaceGallery")}
