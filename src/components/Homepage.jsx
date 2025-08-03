@@ -9,8 +9,7 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import NewsSlider from './NewsSlider'
 import UpcomingMission from './UpcomingMission'
-
-
+import Chatbot from './Chatbot'
 const Homepage = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [modalContent, setModalContent] = useState(null);
@@ -55,6 +54,7 @@ const Homepage = () => {
         <div className="my-5">
           <Iss />
         </div>
+        <Chatbot/>
         <Footer/>
     </>
   )
