@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <NavBar bg="light" data-bs-theme="light">
     <Container>
-      <NavBar.Brand href="#home">
+      <NavBar.Brand href="/">
       <img
         src={logo}
         width="80"

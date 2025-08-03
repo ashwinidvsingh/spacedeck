@@ -7,6 +7,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState([
     { type: 'bot', text: "Hey there 👋 I'm your SpaceBot!" }
   ]);
+  const apiKey = import.meta.env.VITE_GEMINI_KEY;
 //   const [input, setInput] = useState('');
   const inputRef = useRef(null);
   const handleSend = async () => {
@@ -23,7 +24,7 @@ const Chatbot = () => {
   };
 
   const getAIResponse = async (message) => {
-    const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBz3O4aio49R3DRswe49hDh6S2sZPkLP1g", {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

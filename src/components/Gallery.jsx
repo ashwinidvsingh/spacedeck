@@ -43,7 +43,7 @@ function Gallery() {
     
   return (
     <>
-      <Card cardName= "Space Gallery" url={galleryData?.links[0]?.href} onClick={()=>handleClick}>
+      <Card cardName= "Space Gallery" url={galleryData?.links[0]?.href} onClick={()=>handleClick()}>
         <h3>{galleryData?.data?.[0]?.title}</h3>
       </Card>
       {showGallery && galleryData && <SpaceGallery data= {itemsData}/>}

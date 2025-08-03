@@ -81,12 +81,12 @@ function Mission({openModal}) {
             </>
         );
     }
-  return (
+    return (
         <Card cardName= "Latest Mission" url={mission?.links?.patch?.large} onClick={handleClick}>
             <h3>{mission?.name}</h3>
         </Card>
 
-  )
+    )
 }
 
 export default Mission
