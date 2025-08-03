@@ -25,11 +25,11 @@ function NewsSlider() {
     }, []);
 
     const handleClick = () => {
-      navigate('/News');
+      navigate('/news');
     }
     
   return (
-    <Carousel>
+    <Carousel onClick={()=> handleClick()}>
         {newsData && newsData.map((news, index)=>(
             <Carousel.Item key={index} interval={1000}>
                 <div className="d-flex justify-content-center align-items-center bg-light" style={{ height: '500px' }}>
